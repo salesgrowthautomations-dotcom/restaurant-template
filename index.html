@@ -4,142 +4,94 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aquatechniques | Premium Imported Guppies</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
-body { background:#0f172a; color:white; line-height:1.6; scroll-behavior:smooth;}
-header { background:linear-gradient(90deg,#0ea5e9,#2563eb); padding:20px 10%; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000;}
-header h1 { font-size:24px; font-weight:700;}
-nav a { color:white; text-decoration:none; margin-left:20px; font-weight:500; transition:.3s;}
-nav a:hover { color:#f0f9ff;}
-.hero { text-align:center; padding:100px 20px; background:url('https://images.unsplash.com/photo-1581888227599-779811939961') center/cover no-repeat; background-size:cover; position:relative; }
-.hero::after { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);}
-.hero-content { position:relative; z-index:2;}
-.hero h2 { font-size:42px; margin-bottom:20px; font-weight:700; color:#f0f9ff; text-shadow:1px 1px 5px #000;}
-.hero p { font-size:20px; margin-bottom:30px; text-shadow:1px 1px 5px #000;}
-.btn { background:#0ea5e9; padding:14px 36px; border-radius:30px; text-decoration:none; color:white; font-weight:600; transition:.3s;}
-.btn:hover { background:#2563eb;}
-.about { padding:60px 10%; text-align:center;}
-.about h3 { font-size:32px; margin-bottom:20px; color:#38bdf8;}
-.stats { display:flex; justify-content:space-around; margin-top:40px; flex-wrap:wrap;}
-.stat-box { margin:20px; text-align:center;}
-.stat-box h4 { font-size:28px; color:#0ea5e9; }
-.gallery { padding:60px 10%; text-align:center;}
-.gallery h3 { font-size:32px; margin-bottom:40px; color:#38bdf8;}
-.gallery-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
-.gallery-container img { width:100%; border-radius:12px; cursor:pointer; transition:.4s; transform:scale(1);}
-.gallery-container img:hover { transform:scale(1.1) rotate(1deg); box-shadow:0 0 15px #0ea5e9;}
-.contact { padding:60px 10%; text-align:center; background:#1e293b;}
-.contact h3 { margin-bottom:20px; color:#38bdf8;}
-form { display:flex; flex-direction:column; max-width:400px; margin:0 auto; }
-form input, form textarea, form select { margin-bottom:15px; padding:12px; border-radius:8px; border:none; font-size:16px;}
-form button { padding:14px; background:#0ea5e9; border:none; color:white; font-weight:600; border-radius:30px; cursor:pointer; transition:.3s;}
-form button:hover { background:#2563eb;}
-.testimonials { padding:60px 10%; text-align:center;}
-.testimonials h3 { font-size:32px; margin-bottom:40px; color:#38bdf8;}
-.testimonial-container { display:flex; overflow-x:auto; scroll-snap-type:x mandatory; gap:20px; padding-bottom:20px;}
-.testimonial { flex:0 0 300px; background:#2563eb; padding:20px; border-radius:12px; scroll-snap-align:start; transition:.3s;}
-.testimonial p { font-size:16px; margin-bottom:10px;}
-.testimonial h4 { font-size:18px; color:#f0f9ff;}
-.footer, .countdown { text-align:center; padding:20px; background:#0f172a; font-size:14px; opacity:0.7; margin-top:40px;}
-.countdown span { color:#0ea5e9; font-weight:700; font-size:20px;}
-.floating-whatsapp { position:fixed; bottom:30px; right:30px; background:#25d366; color:white; width:60px; height:60px; border-radius:50%; display:flex; justify-content:center; align-items:center; font-size:30px; z-index:1000; box-shadow:0 5px 15px rgba(0,0,0,0.3); transition:.3s; text-decoration:none;}
-.floating-whatsapp:hover { transform:scale(1.1);}
-@media(max-width:768px){ .hero h2{ font-size:28px;} .stats { flex-direction:column; } .testimonial-container { flex-wrap:wrap; justify-content:center;} }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0f172a;color:white;line-height:1.6;}
+header{background:linear-gradient(90deg,#0ea5e9,#2563eb);padding:20px 10%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;}
+header h1{font-size:22px;}
+nav a{color:white;text-decoration:none;margin-left:20px;}
+nav a:hover{color:#f0f9ff;}
+.hero{padding:100px 20px;text-align:center;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover;}
+.hero h2{font-size:40px;margin-bottom:20px;}
+.btn{background:#0ea5e9;padding:14px 32px;border-radius:30px;text-decoration:none;color:white;font-weight:600;transition:.3s;}
+.btn:hover{background:#2563eb;}
+.section{padding:60px 10%;text-align:center;}
+.section h3{margin-bottom:30px;color:#38bdf8;font-size:30px;}
+.gallery-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
+.gallery-container img{width:100%;border-radius:12px;transition:.3s;cursor:pointer;}
+.gallery-container img:hover{transform:scale(1.05);box-shadow:0 0 15px #0ea5e9;}
+.testimonial-container{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:20px;padding-bottom:20px;}
+.testimonial{flex:0 0 300px;background:#2563eb;padding:20px;border-radius:12px;scroll-snap-align:start;transition:.3s;}
+.testimonial p{font-size:16px;margin-bottom:10px;}
+.testimonial h4{font-size:18px;color:#f0f9ff;}
+form{display:flex;flex-direction:column;max-width:400px;margin:0 auto;}
+form input,form textarea,form select{margin-bottom:15px;padding:12px;border-radius:8px;border:none;font-size:16px;}
+form button{padding:14px;background:#0ea5e9;border:none;color:white;font-weight:600;border-radius:30px;cursor:pointer;transition:.3s;}
+form button:hover{background:#2563eb;}
+.floating-wa{position:fixed;bottom:25px;right:25px;background:#25d366;color:white;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;text-decoration:none;box-shadow:0 5px 15px rgba(0,0,0,.4);}
+footer{text-align:center;padding:20px;background:#111827;font-size:14px;}
+.countdown{margin-top:15px;font-size:18px;color:#f0f9ff;}
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Aquatechniques</h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#contact">Order</a>
-  </nav>
+<h1>Aquatechniques</h1>
+<nav>
+<a href="#about">About</a>
+<a href="#gallery">Gallery</a>
+<a href="#testimonials">Testimonials</a>
+<a href="#contact">Order</a>
+</nav>
 </header>
 
 <section class="hero">
-  <div class="hero-content">
-    <h2>Premium Imported Guppies 🇮🇳✈️🌍</h2>
-    <p>F1 Quality | Affordable Price 💸</p>
-    <a href="https://wa.me/919999999999" class="btn">DM on WhatsApp</a>
-    <p class="countdown" style="margin-top:20px;">Limited Offer! Order within <span id="timer">24:00:00</span></p>
-  </div>
+<h2>Premium Imported Guppies 🇮🇳✈️🌍</h2>
+<p>F1 Quality | Affordable Price 💸</p>
+<br>
+<a href="https://wa.me/919999999999" class="btn">Order Now on WhatsApp</a>
+<p class="countdown">Limited Offer! Order within <span id="timer">24:00:00</span></p>
 </section>
 
-<section class="about" id="about">
-  <h3>10+ Years of Passion, Quality & Trust 🐠</h3>
-  <p>We provide high-quality imported guppies with strong genetics and vibrant colors. Trusted by 5,000+ happy customers across India.</p>
-  <div class="stats">
-    <div class="stat-box">
-      <h4>37.9K+</h4>
-      <p>Followers</p>
-    </div>
-    <div class="stat-box">
-      <h4>283+</h4>
-      <p>Posts</p>
-    </div>
-    <div class="stat-box">
-      <h4>5K+</h4>
-      <p>Happy Customers</p>
-    </div>
-  </div>
+<section class="section" id="about">
+<h3>10+ Years of Passion & Quality 🐠</h3>
+<p>5,000+ happy customers across India. Healthy F1 imported guppies with vibrant genetics and premium care.</p>
 </section>
 
-<section class="gallery" id="gallery">
-  <h3>Our Beautiful Guppies</h3>
-  <div class="gallery-container">
-    <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6" alt="Guppy 1">
-    <img src="https://images.unsplash.com/photo-1598133894000-865a2e7a9b1b" alt="Guppy 2">
-    <img src="https://images.unsplash.com/photo-1611257407491-1f3c5f79e3e8" alt="Guppy 3">
-    <img src="https://images.unsplash.com/photo-1611229381516-4b50f2b6e59f" alt="Guppy 4">
-  </div>
+<section class="section" id="gallery">
+<h3>Real Guppy Photos</h3>
+<div class="gallery-container">
+  <!-- Replace these URLs with actual Instagram image URLs -->
+  <img src="https://instagram.fmaa2-1.fna.fbcdn.net/v/t51.2885-15/1234567890_n.jpg" alt="Guppy 1">
+  <img src="https://instagram.fmaa2-1.fna.fbcdn.net/v/t51.2885-15/0987654321_n.jpg" alt="Guppy 2">
+  <img src="https://instagram.fmaa2-1.fna.fbcdn.net/v/t51.2885-15/1122334455_n.jpg" alt="Guppy 3">
+  <img src="https://instagram.fmaa2-1.fna.fbcdn.net/v/t51.2885-15/2233445566_n.jpg" alt="Guppy 4">
+</div>
 </section>
 
-<section class="testimonials" id="testimonials">
-  <h3>What Our Customers Say</h3>
-  <div class="testimonial-container">
-    <div class="testimonial">
-      <p>"Amazing quality, my aquarium looks stunning now!"</p>
-      <h4>- Rajesh K.</h4>
-    </div>
-    <div class="testimonial">
-      <p>"Fast delivery and healthy guppies, highly recommended!"</p>
-      <h4>- Priya S.</h4>
-    </div>
-    <div class="testimonial">
-      <p>"10/10 experience, will order again for my fish farm."</p>
-      <h4>- Arjun M.</h4>
-    </div>
-  </div>
+<section class="section" id="testimonials">
+<h3>What Our Customers Say</h3>
+<div class="testimonial-container">
+  <div class="testimonial"><p>"Amazing quality, my aquarium looks stunning now!"</p><h4>- Rajesh K.</h4></div>
+  <div class="testimonial"><p>"Fast delivery and healthy guppies, highly recommended!"</p><h4>- Priya S.</h4></div>
+  <div class="testimonial"><p>"10/10 experience, will order again for my fish farm."</p><h4>- Arjun M.</h4></div>
+</div>
 </section>
 
-<section class="contact" id="contact">
-  <h3>Place Your Order / Contact Us</h3>
-  <form action="https://formspree.io/f/mnqlkrlp" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="_replyto" placeholder="Your Email" required>
-    <input type="text" name="phone" placeholder="Phone / WhatsApp" required>
-    <select name="product" required>
-      <option value="">Select Guppy Type</option>
-      <option value="F1 Imported Guppy">F1 Imported Guppy</option>
-      <option value="Fancy Guppy">Fancy Guppy</option>
-      <option value="Endler Guppy">Endler Guppy</option>
-    </select>
-    <textarea name="message" rows="4" placeholder="Any Message / Requirements"></textarea>
-    <button type="submit">Send Order</button>
-  </form>
-  <p style="margin-top:20px;">Or pay directly via UPI: <strong>99999@upi</strong></p>
+<section class="section" id="contact">
+<h3>📍 Thrissur | Contact Us</h3>
+<p>DM us directly for bulk orders & pricing.</p>
+<br>
+<a href="https://wa.me/919999999999" class="btn">Message on WhatsApp</a>
 </section>
 
-<a href="https://wa.me/919999999999" class="floating-whatsapp">💬</a>
+<a href="https://wa.me/919999999999" class="floating-wa">💬</a>
 
-<footer class="footer">
-  © 2026 Aquatechniques | Thrissur, Kerala | All Rights Reserved
+<footer>
+© 2026 Aquatechniques | All Rights Reserved
 </footer>
 
 <script>
