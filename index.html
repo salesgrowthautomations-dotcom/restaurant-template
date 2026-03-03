@@ -3,269 +3,158 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Café Flourista | Best Brunch Café in Mangalore</title>
-
-<meta name="description" content="Café Flourista is a vibrant café in Mangaluru offering breakfast, brunch, vegetarian options and signature dishes like Shakshuka, Shepherd’s Pie, Lemon Garlic Sauce Steak and Millet Bowls. Open 10 AM – 9 PM (Closed Tuesdays). Located at Navbharat Circle, Mangalore.">
-
+<title>Aquatechniques | Premium Imported Guppies</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background: #ffffff;
-  color: #222;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  padding: 20px 10%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(255,255,255,0.95);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-  z-index: 1000;
-}
-
-header h2 {
-  font-weight: 700;
-}
-
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #222;
-  font-weight: 500;
-}
-
-.hero {
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 10%;
-  color: white;
-}
-
-.hero-content {
-  background: rgba(0,0,0,0.6);
-  padding: 40px;
-  border-radius: 20px;
-}
-
-.hero h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 14px 28px;
-  background: #c8a96a;
-  color: #000;
-  border-radius: 40px;
-  text-decoration: none;
-  font-weight: 600;
-  margin-top: 20px;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background: #fff;
-}
-
-section {
-  padding: 100px 10%;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 32px;
-}
-
-.menu {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 30px;
-}
-
-.card {
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-.card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 20px;
-}
-
-.review-box {
-  background: #f9f9f9;
-  padding: 25px;
-  border-radius: 15px;
-  margin: 15px auto;
-  max-width: 700px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-}
-
-form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-input, textarea {
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-}
-
-input:focus, textarea:focus {
-  outline: none;
-  border-color: #c8a96a;
-}
-
-footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 30px;
-}
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
+body { background:#0f172a; color:white; line-height:1.6; scroll-behavior:smooth;}
+header { background:linear-gradient(90deg,#0ea5e9,#2563eb); padding:20px 10%; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000;}
+header h1 { font-size:24px; font-weight:700;}
+nav a { color:white; text-decoration:none; margin-left:20px; font-weight:500; transition:.3s;}
+nav a:hover { color:#f0f9ff;}
+.hero { text-align:center; padding:100px 20px; background:url('https://images.unsplash.com/photo-1581888227599-779811939961') center/cover no-repeat; background-size:cover; position:relative; }
+.hero::after { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);}
+.hero-content { position:relative; z-index:2;}
+.hero h2 { font-size:42px; margin-bottom:20px; font-weight:700; color:#f0f9ff; text-shadow:1px 1px 5px #000;}
+.hero p { font-size:20px; margin-bottom:30px; text-shadow:1px 1px 5px #000;}
+.btn { background:#0ea5e9; padding:14px 36px; border-radius:30px; text-decoration:none; color:white; font-weight:600; transition:.3s;}
+.btn:hover { background:#2563eb;}
+.about { padding:60px 10%; text-align:center;}
+.about h3 { font-size:32px; margin-bottom:20px; color:#38bdf8;}
+.stats { display:flex; justify-content:space-around; margin-top:40px; flex-wrap:wrap;}
+.stat-box { margin:20px; text-align:center;}
+.stat-box h4 { font-size:28px; color:#0ea5e9; }
+.gallery { padding:60px 10%; text-align:center;}
+.gallery h3 { font-size:32px; margin-bottom:40px; color:#38bdf8;}
+.gallery-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
+.gallery-container img { width:100%; border-radius:12px; cursor:pointer; transition:.4s; transform:scale(1);}
+.gallery-container img:hover { transform:scale(1.1) rotate(1deg); box-shadow:0 0 15px #0ea5e9;}
+.contact { padding:60px 10%; text-align:center; background:#1e293b;}
+.contact h3 { margin-bottom:20px; color:#38bdf8;}
+form { display:flex; flex-direction:column; max-width:400px; margin:0 auto; }
+form input, form textarea, form select { margin-bottom:15px; padding:12px; border-radius:8px; border:none; font-size:16px;}
+form button { padding:14px; background:#0ea5e9; border:none; color:white; font-weight:600; border-radius:30px; cursor:pointer; transition:.3s;}
+form button:hover { background:#2563eb;}
+.testimonials { padding:60px 10%; text-align:center;}
+.testimonials h3 { font-size:32px; margin-bottom:40px; color:#38bdf8;}
+.testimonial-container { display:flex; overflow-x:auto; scroll-snap-type:x mandatory; gap:20px; padding-bottom:20px;}
+.testimonial { flex:0 0 300px; background:#2563eb; padding:20px; border-radius:12px; scroll-snap-align:start; transition:.3s;}
+.testimonial p { font-size:16px; margin-bottom:10px;}
+.testimonial h4 { font-size:18px; color:#f0f9ff;}
+.footer, .countdown { text-align:center; padding:20px; background:#0f172a; font-size:14px; opacity:0.7; margin-top:40px;}
+.countdown span { color:#0ea5e9; font-weight:700; font-size:20px;}
+.floating-whatsapp { position:fixed; bottom:30px; right:30px; background:#25d366; color:white; width:60px; height:60px; border-radius:50%; display:flex; justify-content:center; align-items:center; font-size:30px; z-index:1000; box-shadow:0 5px 15px rgba(0,0,0,0.3); transition:.3s; text-decoration:none;}
+.floating-whatsapp:hover { transform:scale(1.1);}
+@media(max-width:768px){ .hero h2{ font-size:28px;} .stats { flex-direction:column; } .testimonial-container { flex-wrap:wrap; justify-content:center;} }
 </style>
 </head>
 
 <body>
 
 <header>
-<h2>Café Flourista</h2>
-<nav>
-<a href="#menu">Menu</a>
-<a href="#reviews">Reviews</a>
-<a href="#booking">Book</a>
-</nav>
+  <h1>Aquatechniques</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Order</a>
+  </nav>
 </header>
 
 <section class="hero">
-<div class="hero-content">
-<h1>A Vibrant Café Experience in Mangaluru</h1>
-<p>From wholesome breakfasts to cozy dinners, Café Flourista brings together global flavours, comforting classics, and beautifully plated desserts — all in a bright, welcoming space.</p>
-<a href="#booking" class="btn">Reserve Your Table</a>
-</div>
+  <div class="hero-content">
+    <h2>Premium Imported Guppies 🇮🇳✈️🌍</h2>
+    <p>F1 Quality | Affordable Price 💸</p>
+    <a href="https://wa.me/919999999999" class="btn">DM on WhatsApp</a>
+    <p class="countdown" style="margin-top:20px;">Limited Offer! Order within <span id="timer">24:00:00</span></p>
+  </div>
 </section>
 
-<section id="menu">
-<h2>Our Menu Highlights</h2>
-
-<div class="menu">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1543352634-99a5d50ae78e">
-<div class="card-content">
-<h3>Shakshuka</h3>
-<p>Poached eggs in rich spiced tomato sauce.</p>
-</div></div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d">
-<div class="card-content">
-<h3>Shepherd’s Pie</h3>
-<p>Hearty layered classic baked to perfection.</p>
-</div></div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1558030006-450675393462">
-<div class="card-content">
-<h3>Lemon Garlic Sauce Steak</h3>
-<p>Juicy steak glazed with signature lemon garlic sauce.</p>
-</div></div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2">
-<div class="card-content">
-<h3>Millet Bowls</h3>
-<p>Healthy, nourishing bowls packed with flavour.</p>
-</div></div>
-
-</div>
+<section class="about" id="about">
+  <h3>10+ Years of Passion, Quality & Trust 🐠</h3>
+  <p>We provide high-quality imported guppies with strong genetics and vibrant colors. Trusted by 5,000+ happy customers across India.</p>
+  <div class="stats">
+    <div class="stat-box">
+      <h4>37.9K+</h4>
+      <p>Followers</p>
+    </div>
+    <div class="stat-box">
+      <h4>283+</h4>
+      <p>Posts</p>
+    </div>
+    <div class="stat-box">
+      <h4>5K+</h4>
+      <p>Happy Customers</p>
+    </div>
+  </div>
 </section>
 
-<section id="reviews">
-<h2>What Our Guests Say</h2>
-
-<div class="review-box">
-⭐⭐⭐⭐⭐  
-“Best brunch spot in Mangalore! The Shakshuka was outstanding.”  
-– Aditi R.
-</div>
-
-<div class="review-box">
-⭐⭐⭐⭐⭐  
-“Loved the ambience and Shepherd’s Pie. Will visit again.”  
-– Rahul M.
-</div>
-
-<div class="review-box">
-⭐⭐⭐⭐⭐  
-“Perfect place for family dinners. Millet bowls are a must try!”  
-– Sneha K.
-</div>
-
+<section class="gallery" id="gallery">
+  <h3>Our Beautiful Guppies</h3>
+  <div class="gallery-container">
+    <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6" alt="Guppy 1">
+    <img src="https://images.unsplash.com/photo-1598133894000-865a2e7a9b1b" alt="Guppy 2">
+    <img src="https://images.unsplash.com/photo-1611257407491-1f3c5f79e3e8" alt="Guppy 3">
+    <img src="https://images.unsplash.com/photo-1611229381516-4b50f2b6e59f" alt="Guppy 4">
+  </div>
 </section>
 
-<section id="booking">
-<h2>Reserve a Table</h2>
-
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<input type="date" required>
-<input type="time" required>
-<textarea placeholder="Special Requests"></textarea>
-<button class="btn" type="submit">Book Now</button>
-</form>
-
-<p style="text-align:center;margin-top:20px;">
-Open 10 AM – 9 PM (Tuesday Holiday)  
-Navbharat Circle, Mangalore  
-Free Parking • Wheelchair Accessible
-</p>
-
+<section class="testimonials" id="testimonials">
+  <h3>What Our Customers Say</h3>
+  <div class="testimonial-container">
+    <div class="testimonial">
+      <p>"Amazing quality, my aquarium looks stunning now!"</p>
+      <h4>- Rajesh K.</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Fast delivery and healthy guppies, highly recommended!"</p>
+      <h4>- Priya S.</h4>
+    </div>
+    <div class="testimonial">
+      <p>"10/10 experience, will order again for my fish farm."</p>
+      <h4>- Arjun M.</h4>
+    </div>
+  </div>
 </section>
 
-<footer>
-© 2026 Café Flourista | Designed for a premium dining experience
+<section class="contact" id="contact">
+  <h3>Place Your Order / Contact Us</h3>
+  <form action="https://formspree.io/f/mnqlkrlp" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="_replyto" placeholder="Your Email" required>
+    <input type="text" name="phone" placeholder="Phone / WhatsApp" required>
+    <select name="product" required>
+      <option value="">Select Guppy Type</option>
+      <option value="F1 Imported Guppy">F1 Imported Guppy</option>
+      <option value="Fancy Guppy">Fancy Guppy</option>
+      <option value="Endler Guppy">Endler Guppy</option>
+    </select>
+    <textarea name="message" rows="4" placeholder="Any Message / Requirements"></textarea>
+    <button type="submit">Send Order</button>
+  </form>
+  <p style="margin-top:20px;">Or pay directly via UPI: <strong>99999@upi</strong></p>
+</section>
+
+<a href="https://wa.me/919999999999" class="floating-whatsapp">💬</a>
+
+<footer class="footer">
+  © 2026 Aquatechniques | Thrissur, Kerala | All Rights Reserved
 </footer>
+
+<script>
+// Countdown Timer 24 hours
+let countdownDate = new Date().getTime() + 24*60*60*1000;
+let x = setInterval(function() {
+  let now = new Date().getTime();
+  let distance = countdownDate - now;
+  let hours = Math.floor((distance % (1000 * 60 * 60 * 24))/(1000*60*60));
+  let minutes = Math.floor((distance % (1000 * 60 * 60))/(1000*60));
+  let seconds = Math.floor((distance % (1000*60))/1000);
+  document.getElementById("timer").innerHTML = hours + ":" + minutes + ":" + seconds;
+  if(distance<0){ clearInterval(x); document.getElementById("timer").innerHTML="EXPIRED"; }
+},1000);
+</script>
 
 </body>
 </html>
