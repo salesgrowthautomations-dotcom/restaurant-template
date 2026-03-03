@@ -6,108 +6,73 @@
 <title>Aquatechniques | Premium Imported Guppies</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#0a0f1c;color:white;overflow-x:hidden}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0a0f1c;color:white;overflow-x:hidden;}
 header{
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
-url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1600&q=80');
-background-size:cover;
-background-position:center;
-height:90vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
-}
-header h1{font-size:50px;font-weight:700}
-header p{margin-top:15px;font-size:18px;color:#ccc}
-.btn{
-margin-top:25px;
-padding:14px 30px;
-border:none;
-border-radius:40px;
-background:#00e0ff;
-color:black;
-font-weight:600;
-cursor:pointer;
-transition:.3s;
-}
-.btn:hover{background:#00b3cc}
-section{padding:70px 10%;text-align:center}
-.section-title{font-size:32px;margin-bottom:40px}
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-.card{
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
-border-radius:20px;
-padding:25px;
-transition:.4s;
-}
-.card:hover{transform:translateY(-10px)}
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-.gallery img{
-width:100%;
-border-radius:20px;
-transition:.4s;
-}
-.gallery img:hover{transform:scale(1.05)}
-footer{
-background:#05080f;
-padding:40px;
-text-align:center;
-margin-top:50px;
-}
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-padding:15px 20px;
-border-radius:50px;
-color:white;
-font-weight:600;
-text-decoration:none;
-}
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;background-position:center;height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;position:relative;}
+header h1{font-size:50px;font-weight:700;}
+header p{margin-top:15px;font-size:18px;color:#ccc;}
+.btn{margin-top:25px;padding:14px 30px;border:none;border-radius:40px;background:#00e0ff;color:black;font-weight:600;cursor:pointer;transition:.3s;}
+.btn:hover{background:#00b3cc;}
+section{padding:70px 10%;text-align:center;position:relative;z-index:1;}
+.section-title{font-size:32px;margin-bottom:40px;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-bottom:40px;}
+.card{background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);border-radius:20px;padding:25px;transition:.4s;}
+.card:hover{transform:translateY(-10px);}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.gallery img{width:100%;border-radius:20px;transition:.4s;}
+.gallery img:hover{transform:scale(1.05);}
+.testimonial-container{display:flex;overflow-x:auto;gap:20px;padding-bottom:20px;scroll-snap-type:x mandatory;}
+.testimonial{flex:0 0 300px;background:#2563eb;padding:18px;border-radius:20px;scroll-snap-align:start;transition:.4s;}
+.testimonial p{font-size:16px;margin-bottom:10px;}
+.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:25px;margin-bottom:50px;}
+.price-card{background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);padding:25px;border-radius:20px;transition:.4s;}
+.price-card:hover{transform:translateY(-10px);}
+.price-card h3{margin-bottom:10px;}
+.price-card p{margin-bottom:15px;}
+form{display:flex;flex-direction:column;max-width:400px;margin:0 auto;}
+form input,form textarea,form select{margin-bottom:12px;padding:10px;border-radius:8px;border:none;font-size:16px;}
+form button{padding:12px;background:#00e0ff;border:none;color:black;font-weight:600;border-radius:30px;cursor:pointer;transition:.3s;}
+form button:hover{background:#00b3cc;}
+footer{background:#05080f;padding:40px;text-align:center;margin-top:50px;}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;padding:15px 20px;border-radius:50px;color:white;font-weight:600;text-decoration:none;}
+#fish-background{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;}
+.fish{position:absolute;width:80px;animation:swim linear infinite;}
 </style>
 </head>
 <body>
+
+<!-- Animated Fish Background -->
+<div id="fish-background"></div>
 
 <header>
 <h1>Aquatechniques</h1>
 <p>Premium Imported Guppies | 10+ Years of Passion & Trust</p>
 <a href="#contact"><button class="btn">Order Now</button></a>
+<p style="margin-top:10px;color:#00e0ff;font-weight:600;">Limited Time Offer!</p>
 </header>
 
 <section>
 <h2 class="section-title">Why Choose Us?</h2>
 <div class="cards">
-<div class="card">
-<h3>F1 Imported Quality</h3>
-<p>Carefully selected premium strains with vibrant genetics.</p>
-</div>
-<div class="card">
-<h3>Affordable Pricing</h3>
-<p>Wholesale & retail options available across India.</p>
-</div>
-<div class="card">
-<h3>5,000+ Happy Customers</h3>
-<p>Trusted by breeders and hobbyists nationwide.</p>
-</div>
+<div class="card"><h3>F1 Imported Quality</h3><p>Carefully selected premium strains with vibrant genetics.</p></div>
+<div class="card"><h3>Affordable Pricing</h3><p>Wholesale & retail options available across India.</p></div>
+<div class="card"><h3>5,000+ Happy Customers</h3><p>Trusted by breeders and hobbyists nationwide.</p></div>
 </div>
 </section>
 
 <section>
-<h2 class="section-title">Our Premium Collection</h2>
+<h2 class="section-title">Pricing Packages</h2>
+<div class="pricing">
+<div class="price-card"><h3>Basic Package</h3><p>₹8,000</p><p>10–20 Guppies | Free Delivery</p></div>
+<div class="price-card"><h3>Standard Package</h3><p>₹12,000</p><p>25–40 Guppies | Free Delivery</p></div>
+<div class="price-card"><h3>Premium Package</h3><p>₹15,000</p><p>50+ Guppies | Free Delivery + Gift</p></div>
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Gallery</h2>
 <div class="gallery">
 <img src="https://images.unsplash.com/photo-1618842676088-c4d48a6b7c9d?auto=format&fit=crop&w=800&q=80">
 <img src="https://images.unsplash.com/photo-1581888227599-779811939961?auto=format&fit=crop&w=800&q=80">
@@ -116,18 +81,61 @@ text-decoration:none;
 </div>
 </section>
 
-<section id="contact">
-<h2 class="section-title">Contact Us</h2>
-<p>📍 Thrissur, India</p>
-<p>📩 DM us on Instagram: @aquatechniques_tsr</p>
-<p>📦 Pan India Shipping Available</p>
+<section>
+<h2 class="section-title">Customer Testimonials</h2>
+<div class="testimonial-container">
+<div class="testimonial"><p>"These guppies are stunning — vibrant color and super healthy!"</p></div>
+<div class="testimonial"><p>"Fast delivery and amazing quality. Definitely ordering again!"</p></div>
+<div class="testimonial"><p>"Great service and beautiful fish — worth every rupee."</p></div>
+</div>
 </section>
 
-<footer>
-<p>© 2026 Aquatechniques. All Rights Reserved.</p>
-</footer>
+<section id="contact">
+<h2 class="section-title">Place Your Order</h2>
+<form>
+<input type="text" placeholder="Name" required>
+<input type="text" placeholder="Phone / WhatsApp" required>
+<select required>
+<option value="">Select Package</option>
+<option value="basic">Basic ₹8k</option>
+<option value="standard">Standard ₹12k</option>
+<option value="premium">Premium ₹15k</option>
+</select>
+<textarea placeholder="Additional Notes"></textarea>
+<button type="button" onclick="window.location='https://wa.me/919999999999'">Send on WhatsApp</button>
+</form>
+</section>
 
-<a class="whatsapp" href="https://wa.me/919999999999" target="_blank">Chat on WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/919999999999" target="_blank">💬 WhatsApp</a>
+<footer>© 2026 Aquatechniques. All Rights Reserved</footer>
 
+<script>
+// Fish Animation
+let fishBackground = document.getElementById('fish-background');
+let fishImages = [
+'https://images.unsplash.com/photo-1618842676088-c4d48a6b7c9d?auto=format&fit=crop&w=100&q=80',
+'https://images.unsplash.com/photo-1581888227599-779811939961?auto=format&fit=crop&w=100&q=80'
+];
+for(let i=0;i<6;i++){
+let f = document.createElement('img');
+f.src=fishImages[i%2]; f.className='fish';
+f.style.top=Math.random()*90+'%';
+f.style.left='-'+Math.random()*100+'%';
+f.style.animationDuration=(10+Math.random()*15)+'s';
+fishBackground.appendChild(f);
+}
+
+// Countdown Timer
+let endTime = new Date().getTime() + 24*60*60*1000;
+let x = setInterval(function(){
+let now = new Date().getTime();
+let d = endTime-now;
+let h=Math.floor((d%(1000*60*60*24))/(1000*60*60));
+let m=Math.floor((d%(1000*60*60))/(1000*60));
+let s=Math.floor((d%(1000*60))/1000);
+document.querySelector('header p').innerHTML="Limited Time Offer! "+h+":"+m+":"+s+" left";
+if(d<0){clearInterval(x);document.querySelector('header p').innerHTML="EXPIRED";}
+},1000);
+</script>
 </body>
 </html>
