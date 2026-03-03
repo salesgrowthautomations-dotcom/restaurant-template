@@ -1,149 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Restaurant Name | Best Restaurant in City</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Restaurant Name serves authentic cuisine in City. Order directly via WhatsApp and enjoy fresh, delicious meals.">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html { scroll-behavior: smooth; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Café Flourista | Best Brunch Café in Mangalore</title>
+
+<meta name="description" content="Café Flourista is a vibrant café in Mangaluru offering breakfast, brunch, vegetarian options and signature dishes like Shakshuka, Shepherd’s Pie, Lemon Garlic Sauce Steak and Millet Bowls. Open 10 AM – 9 PM (Closed Tuesdays). Located at Navbharat Circle, Mangalore.">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #222;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+
+header h2 {
+  font-weight: 700;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 10%;
+  color: white;
+}
+
+.hero-content {
+  background: rgba(0,0,0,0.6);
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #c8a96a;
+  color: #000;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #fff;
+}
+
+section {
+  padding: 100px 10%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.review-box {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 15px;
+  margin: 15px auto;
+  max-width: 700px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #c8a96a;
+}
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+</style>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body>
 
-<!-- NAVBAR -->
-<nav class="bg-white shadow-md fixed w-full z-50">
-  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-    <h1 class="text-xl font-bold">Restaurant Name</h1>
-    <div class="space-x-6 hidden md:block">
-      <a href="#about" class="hover:text-red-500">About</a>
-      <a href="#menu" class="hover:text-red-500">Menu</a>
-      <a href="#gallery" class="hover:text-red-500">Gallery</a>
-      <a href="#contact" class="hover:text-red-500">Contact</a>
-    </div>
-  </div>
+<header>
+<h2>Café Flourista</h2>
+<nav>
+<a href="#menu">Menu</a>
+<a href="#reviews">Reviews</a>
+<a href="#booking">Book</a>
 </nav>
+</header>
 
-<!-- HERO -->
-<section class="h-screen bg-cover bg-center flex items-center justify-center text-center text-white"
-style="background-image: url('https://images.unsplash.com/photo-1555992336-03a23c4a3e3a');">
-  <div class="bg-black bg-opacity-60 p-10 rounded-xl">
-    <h2 class="text-4xl md:text-6xl font-bold">Authentic Flavours. Memorable Experience.</h2>
-    <p class="mt-4 text-lg">Serving the best cuisine in City</p>
-    <a href="#contact" class="mt-6 inline-block bg-red-500 px-8 py-3 rounded-lg font-semibold">
-      Order Now
-    </a>
-  </div>
+<section class="hero">
+<div class="hero-content">
+<h1>A Vibrant Café Experience in Mangaluru</h1>
+<p>From wholesome breakfasts to cozy dinners, Café Flourista brings together global flavours, comforting classics, and beautifully plated desserts — all in a bright, welcoming space.</p>
+<a href="#booking" class="btn">Reserve Your Table</a>
+</div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="py-20 px-6 max-w-5xl mx-auto text-center">
-  <h2 class="text-3xl font-bold mb-6">About Us</h2>
-  <p class="text-gray-600 leading-relaxed">
-    Welcome to Restaurant Name. Located in City, we are known for fresh ingredients,
-    authentic recipes, and warm hospitality. Visit us for dine-in or order directly
-    through WhatsApp for quick service.
-  </p>
+<section id="menu">
+<h2>Our Menu Highlights</h2>
+
+<div class="menu">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1543352634-99a5d50ae78e">
+<div class="card-content">
+<h3>Shakshuka</h3>
+<p>Poached eggs in rich spiced tomato sauce.</p>
+</div></div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d">
+<div class="card-content">
+<h3>Shepherd’s Pie</h3>
+<p>Hearty layered classic baked to perfection.</p>
+</div></div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1558030006-450675393462">
+<div class="card-content">
+<h3>Lemon Garlic Sauce Steak</h3>
+<p>Juicy steak glazed with signature lemon garlic sauce.</p>
+</div></div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2">
+<div class="card-content">
+<h3>Millet Bowls</h3>
+<p>Healthy, nourishing bowls packed with flavour.</p>
+</div></div>
+
+</div>
 </section>
 
-<!-- MENU -->
-<section id="menu" class="bg-white py-20 px-6">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-12">Our Menu</h2>
+<section id="reviews">
+<h2>What Our Guests Say</h2>
 
-    <div class="grid md:grid-cols-3 gap-8">
+<div class="review-box">
+⭐⭐⭐⭐⭐  
+“Best brunch spot in Mangalore! The Shakshuka was outstanding.”  
+– Aditi R.
+</div>
 
-      <div class="border rounded-xl p-6 shadow hover:shadow-lg transition">
-        <h3 class="font-bold text-xl">Butter Chicken</h3>
-        <p class="text-gray-500 mt-2">Rich creamy tomato gravy.</p>
-        <p class="mt-3 font-semibold text-red-500">₹299</p>
-      </div>
+<div class="review-box">
+⭐⭐⭐⭐⭐  
+“Loved the ambience and Shepherd’s Pie. Will visit again.”  
+– Rahul M.
+</div>
 
-      <div class="border rounded-xl p-6 shadow hover:shadow-lg transition">
-        <h3 class="font-bold text-xl">Paneer Tikka</h3>
-        <p class="text-gray-500 mt-2">Grilled cottage cheese cubes.</p>
-        <p class="mt-3 font-semibold text-red-500">₹249</p>
-      </div>
+<div class="review-box">
+⭐⭐⭐⭐⭐  
+“Perfect place for family dinners. Millet bowls are a must try!”  
+– Sneha K.
+</div>
 
-      <div class="border rounded-xl p-6 shadow hover:shadow-lg transition">
-        <h3 class="font-bold text-xl">Veg Biryani</h3>
-        <p class="text-gray-500 mt-2">Aromatic basmati rice special.</p>
-        <p class="mt-3 font-semibold text-red-500">₹199</p>
-      </div>
-
-    </div>
-  </div>
 </section>
 
-<!-- GALLERY -->
-<section id="gallery" class="py-20 px-6 bg-gray-100">
-  <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-12">Gallery</h2>
+<section id="booking">
+<h2>Reserve a Table</h2>
 
-    <div class="grid md:grid-cols-3 gap-6">
-      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" class="rounded-xl shadow">
-      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" class="rounded-xl shadow">
-      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" class="rounded-xl shadow">
-    </div>
-  </div>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<input type="date" required>
+<input type="time" required>
+<textarea placeholder="Special Requests"></textarea>
+<button class="btn" type="submit">Book Now</button>
+</form>
+
+<p style="text-align:center;margin-top:20px;">
+Open 10 AM – 9 PM (Tuesday Holiday)  
+Navbharat Circle, Mangalore  
+Free Parking • Wheelchair Accessible
+</p>
+
 </section>
 
-<!-- REVIEWS -->
-<section class="py-20 px-6 bg-white">
-  <div class="max-w-5xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-10">Customer Reviews</h2>
-
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-gray-50 p-6 rounded-xl shadow">
-        ⭐⭐⭐⭐⭐
-        <p class="mt-2">“Amazing food and fast service!”</p>
-      </div>
-      <div class="bg-gray-50 p-6 rounded-xl shadow">
-        ⭐⭐⭐⭐⭐
-        <p class="mt-2">“Best restaurant experience in the area.”</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="py-20 px-6 bg-gray-900 text-white">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-
-    <div>
-      <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
-      <p><strong>Address:</strong> Full Address Here</p>
-      <p class="mt-2"><strong>Phone:</strong> +91 9876543210</p>
-      <p class="mt-2"><strong>Hours:</strong> 10 AM – 11 PM</p>
-
-      <a href="https://wa.me/919876543210"
-         class="mt-6 inline-block bg-green-500 px-6 py-3 rounded-lg font-semibold">
-         Order on WhatsApp
-      </a>
-    </div>
-
-    <div>
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=YOUR_MAP_LINK"
-        width="100%" height="300"
-        style="border:0;" loading="lazy">
-      </iframe>
-    </div>
-
-  </div>
-</section>
-
-<!-- FLOATING WHATSAPP BUTTON -->
-<a href="https://wa.me/919876543210"
-   class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:scale-110 transition">
-   💬
-</a>
-
-<!-- FOOTER -->
-<footer class="bg-black text-white text-center py-6">
-  <p>© 2026 Restaurant Name. All rights reserved.</p>
+<footer>
+© 2026 Café Flourista | Designed for a premium dining experience
 </footer>
 
 </body>
