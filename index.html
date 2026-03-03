@@ -1,119 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF‑8">
-<meta name="viewport" content="width=device‑width, initial‑scale=1.0">
-<title>Aquatechniques | Premium Guppies</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aquatechniques | Premium Imported Guppies</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#0f172a;color:white;line-height:1.6;}
-header{background:linear-gradient(90deg,#0ea5e9,#2563eb);padding:20px 10%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;}
-header h1{font-size:22px;}
-nav a{color:white;text-decoration:none;margin-left:20px;}
-.hero{padding:80px 20px;text-align:center;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover;}
-.hero h2{font-size:38px;margin-bottom:15px;}
-.btn{background:#0ea5e9;padding:12px 30px;border-radius:30px;text-decoration:none;color:white;font-weight:600;transition:.3s;}
-.btn:hover{background:#2563eb;}
-.section{padding:50px 10%;text-align:center;}
-.section h3{margin-bottom:25px;color:#38bdf8;font-size:28px;}
-.gallery {display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
-.gallery a{display:block;border-radius:12px;overflow:hidden;transition:.3s;}
-.gallery img{width:100%;display:block;transform:scale(1);transition:.3s;}
-.gallery a:hover img{transform:scale(1.05) rotate(1deg);}
-.testimonial-container{display:flex;overflow-x:auto;gap:20px;padding-bottom:20px;}
-.testimonial{flex:0 0 300px;background:#2563eb;padding:18px;border-radius:12px;}
-form{display:flex;flex-direction:column;max-width:400px;margin:0 auto;}
-form input,form textarea,form select{margin-bottom:12px;padding:10px;border-radius:8px;border:none;font-size:16px;}
-form button{padding:12px;background:#0ea5e9;border:none;color:white;font-weight:600;border-radius:30px;cursor:pointer;transition:.3s;}
-form button:hover{background:#2563eb;}
-.floating-wa{position:fixed;bottom:25px;right:25px;background:#25d366;color:white;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;text-decoration:none;box-shadow:0 5px 15px rgba(0,0,0,.4);}
-footer{text-align:center;padding:20px;background:#111827;font-size:14px;}
-.countdown{margin-top:15px;font-size:18px;color:#f0f9ff;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0a0f1c;color:white;overflow-x:hidden}
+header{
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),
+url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+header h1{font-size:50px;font-weight:700}
+header p{margin-top:15px;font-size:18px;color:#ccc}
+.btn{
+margin-top:25px;
+padding:14px 30px;
+border:none;
+border-radius:40px;
+background:#00e0ff;
+color:black;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+.btn:hover{background:#00b3cc}
+section{padding:70px 10%;text-align:center}
+.section-title{font-size:32px;margin-bottom:40px}
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+.card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border-radius:20px;
+padding:25px;
+transition:.4s;
+}
+.card:hover{transform:translateY(-10px)}
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+.gallery img{
+width:100%;
+border-radius:20px;
+transition:.4s;
+}
+.gallery img:hover{transform:scale(1.05)}
+footer{
+background:#05080f;
+padding:40px;
+text-align:center;
+margin-top:50px;
+}
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+padding:15px 20px;
+border-radius:50px;
+color:white;
+font-weight:600;
+text-decoration:none;
+}
 </style>
 </head>
-
 <body>
 
 <header>
-  <h1>Aquatechniques</h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#contact">Order</a>
-  </nav>
+<h1>Aquatechniques</h1>
+<p>Premium Imported Guppies | 10+ Years of Passion & Trust</p>
+<a href="#contact"><button class="btn">Order Now</button></a>
 </header>
 
-<section class="hero">
-  <h2>Premium Imported Guppies 🇮🇳✈️🌍</h2>
-  <p>F1 Quality | Affordable Price 💸</p>
-  <br>
-  <a href="https://wa.me/919999999999" class="btn">Order on WhatsApp</a>
-  <p class="countdown">Limited offer! Order within <span id="timer">24:00:00</span></p>
+<section>
+<h2 class="section-title">Why Choose Us?</h2>
+<div class="cards">
+<div class="card">
+<h3>F1 Imported Quality</h3>
+<p>Carefully selected premium strains with vibrant genetics.</p>
+</div>
+<div class="card">
+<h3>Affordable Pricing</h3>
+<p>Wholesale & retail options available across India.</p>
+</div>
+<div class="card">
+<h3>5,000+ Happy Customers</h3>
+<p>Trusted by breeders and hobbyists nationwide.</p>
+</div>
+</div>
 </section>
 
-<section class="section" id="about">
-  <h3>10+ Years of Passion & Quality</h3>
-  <p>Trusted by thousands of aquarium lovers across India with healthy, vibrant guppies and dedicated customer service.</p>
+<section>
+<h2 class="section-title">Our Premium Collection</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1618842676088-c4d48a6b7c9d?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1581888227599-779811939961?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1599507593499-a3f7d7d97667?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8?auto=format&fit=crop&w=800&q=80">
+</div>
 </section>
 
-<section class="section" id="gallery">
-  <h3>Guppy Showcase</h3>
-  <div class="gallery">
-
-    <a href="https://www.istockphoto.com/photo/guppy-poecilia-reticulata-colorful-rainbow-tropical-aquarium-fish-gm1057678494-282656331" target="_blank">
-      <img src="https://media.istockphoto.com/id/282656331/photo/guppy-poecilia-reticulata-colorful-rainbow-tropical-aquarium-fish.jpg" alt="Colorful Rainbow Guppy">
-    </a>
-
-    <a href="https://www.istockphoto.com/photo/half-black-blue-guppy-gm624749062-109873865" target="_blank">
-      <img src="https://media.istockphoto.com/id/109873865/photo/half-black-blue-guppy.jpg" alt="Half Black & Blue Guppy">
-    </a>
-
-    <a href="https://www.istockphoto.com/photo/male-guppy-fish-snakeskin-gm1267673853-372019753" target="_blank">
-      <img src="https://media.istockphoto.com/id/372019753/photo/male-guppy-fish-snakeskin.jpg" alt="Male Snakeskin Guppy">
-    </a>
-
-  </div>
-  <p style="margin-top:10px;opacity:.7;">*Click on images to view full photo</p>
+<section id="contact">
+<h2 class="section-title">Contact Us</h2>
+<p>📍 Thrissur, India</p>
+<p>📩 DM us on Instagram: @aquatechniques_tsr</p>
+<p>📦 Pan India Shipping Available</p>
 </section>
 
-<section class="section" id="testimonials">
-  <h3>Customer Testimonials</h3>
-  <div class="testimonial-container">
-    <div class="testimonial"><p>"These guppies are stunning — vibrant color and super healthy!"</p></div>
-    <div class="testimonial"><p>"Fast delivery and amazing quality. Definitely ordering again!"</p></div>
-    <div class="testimonial"><p>"Great service and beautiful fish — worth every rupee."</p></div>
-  </div>
-</section>
+<footer>
+<p>© 2026 Aquatechniques. All Rights Reserved.</p>
+</footer>
 
-<section class="section" id="contact">
-  <h3>Place Your Order</h3>
-  <form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="text" placeholder="Phone / WhatsApp" required>
-    <textarea rows="3" placeholder="Any Notes"></textarea>
-    <button type="button" onclick="window.location='https://wa.me/919999999999'">Send on WhatsApp</button>
-  </form>
-</section>
-
-<a href="https://wa.me/919999999999" class="floating-wa">💬</a>
-
-<footer>© 2026 Aquatechniques | All Rights Reserved</footer>
-
-<script>
-// Countdown Timer
-let endTime = new Date().getTime() + 24*60*60*1000;
-let x = setInterval(function() {
-  let now = new Date().getTime();
-  let d = endTime - now;
-  let h = Math.floor((d%(1000*60*60*24))/(1000*60*60));
-  let m = Math.floor((d%(1000*60*60))/(1000*60));
-  let s = Math.floor((d%(1000*60))/1000);
-  document.getElementById("timer").innerHTML = h+":"+m+":"+s;
-  if (d < 0) { clearInterval(x); document.getElementById("timer").innerHTML="EXPIRED"; }
-},1000);
-</script>
+<a class="whatsapp" href="https://wa.me/919999999999" target="_blank">Chat on WhatsApp</a>
 
 </body>
 </html>
