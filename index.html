@@ -3,57 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Café Flourista | Hampankatta</title>
+<title>Café Flourista | Luxury Café Experience</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
   scroll-behavior:smooth;
 }
 
 body{
-  background:#f5f3ef;
-  color:#333;
+  font-family:'Poppins',sans-serif;
+  background:#0f0f0f;
+  color:white;
 }
 
 /* NAVBAR */
 header{
   position:fixed;
   width:100%;
-  background:white;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 8%;
-  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+  padding:20px 8%;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter:blur(10px);
   z-index:1000;
 }
 
-header h2{
-  font-weight:700;
+.logo{
+  font-family:'Playfair Display',serif;
+  font-size:26px;
+  letter-spacing:2px;
 }
 
 nav a{
   text-decoration:none;
-  margin-left:25px;
-  color:#333;
-  font-weight:500;
+  color:white;
+  margin-left:30px;
+  font-weight:300;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#c7a64b;
 }
 
 /* HERO */
 .hero{
   height:100vh;
-  background:url('https://picsum.photos/1600/1000?grayscale') center/cover no-repeat;
+  background:url('https://picsum.photos/1600/1000?blur=1') center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-  color:white;
   position:relative;
 }
 
@@ -62,7 +68,7 @@ nav a{
   position:absolute;
   width:100%;
   height:100%;
-  background:rgba(0,0,0,0.55);
+  background:linear-gradient(to bottom,rgba(0,0,0,0.6),rgba(0,0,0,0.9));
   top:0;
   left:0;
 }
@@ -73,90 +79,103 @@ nav a{
 }
 
 .hero h1{
-  font-size:3.5rem;
-  margin-bottom:15px;
+  font-family:'Playfair Display',serif;
+  font-size:4rem;
+  margin-bottom:20px;
 }
 
-.hero button{
-  padding:12px 30px;
-  border:none;
+.hero p{
+  font-size:18px;
+  margin-bottom:30px;
+  opacity:0.8;
+}
+
+.btn{
+  padding:12px 35px;
   background:#c7a64b;
-  color:white;
-  border-radius:30px;
+  border:none;
+  color:black;
+  border-radius:40px;
+  font-weight:500;
   cursor:pointer;
-  font-size:16px;
 }
 
 /* SECTIONS */
 .section{
-  padding:100px 8%;
+  padding:120px 8%;
   text-align:center;
 }
 
 .section h2{
-  margin-bottom:40px;
-  font-size:2rem;
+  font-family:'Playfair Display',serif;
+  font-size:2.8rem;
+  margin-bottom:50px;
 }
 
-/* MENU CARDS */
+/* MENU */
 .menu-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:40px;
 }
 
-.card{
-  background:white;
-  border-radius:15px;
-  padding:30px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  transition:0.3s;
+.menu-card{
+  background:#1a1a1a;
+  padding:40px;
+  border-radius:20px;
+  transition:0.4s;
 }
 
-.card:hover{
-  transform:translateY(-10px);
+.menu-card:hover{
+  transform:translateY(-15px);
+  background:#222;
 }
 
 /* GALLERY */
 .gallery{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+  gap:25px;
 }
 
 .gallery img{
   width:100%;
-  border-radius:15px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  border-radius:20px;
+  transition:0.4s;
 }
 
-/* MAP */
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+/* RESERVATION */
+form{
+  max-width:500px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+input,textarea{
+  padding:15px;
+  border:none;
+  border-radius:10px;
+}
+
 iframe{
   width:100%;
   height:400px;
-  border-radius:15px;
   border:none;
-}
-
-/* WHATSAPP BUTTON */
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  padding:15px 18px;
-  border-radius:50%;
-  font-size:20px;
-  text-decoration:none;
+  border-radius:20px;
 }
 
 /* FOOTER */
 footer{
-  background:#1e1e1e;
-  color:white;
+  background:black;
+  padding:40px;
   text-align:center;
-  padding:30px;
+  opacity:0.8;
 }
 </style>
 </head>
@@ -164,41 +183,42 @@ footer{
 <body>
 
 <header>
-  <h2>Café Flourista</h2>
+  <div class="logo">Café Flourista</div>
   <nav>
     <a href="#about">About</a>
     <a href="#menu">Menu</a>
     <a href="#gallery">Gallery</a>
-    <a href="#location">Location</a>
+    <a href="#reservation">Reserve</a>
   </nav>
 </header>
 
 <section class="hero">
   <div class="hero-content">
-    <h1>Serving You The Best Of Everything</h1>
-    <button onclick="document.getElementById('menu').scrollIntoView()">Explore Menu</button>
+    <h1>Luxury Café Experience</h1>
+    <p>Serving You The Best Of Everything</p>
+    <button class="btn" onclick="document.getElementById('reservation').scrollIntoView()">Reserve a Table</button>
   </div>
 </section>
 
 <section class="section" id="about">
-  <h2>About Us</h2>
-  <p>Located at Navbharath Circle, Hampankatta, Mangalore. Known for aesthetic interiors, premium bowls, desserts & specialty coffee.</p>
+  <h2>About Flourista</h2>
+  <p>Located at Navbharath Circle, Hampankatta, Mangalore. A premium destination for specialty coffee, curated bowls, and aesthetic dining.</p>
 </section>
 
 <section class="section" id="menu">
-  <h2>Signature Dishes</h2>
+  <h2>Signature Menu</h2>
   <div class="menu-grid">
-    <div class="card">
+    <div class="menu-card">
       <h3>Mexican Fajita Bowl</h3>
-      <p>Veg / Non-Veg • Protein Rich</p>
+      <p>High Protein • Veg / Non-Veg</p>
     </div>
-    <div class="card">
+    <div class="menu-card">
       <h3>Nutella French Toast</h3>
-      <p>Customer Favourite</p>
+      <p>House Favourite</p>
     </div>
-    <div class="card">
-      <h3>Blue Pea Lemonade</h3>
-      <p>Refreshing & Aesthetic</p>
+    <div class="menu-card">
+      <h3>Mediterranean Breakfast Platter</h3>
+      <p>Signature Special</p>
     </div>
   </div>
 </section>
@@ -212,20 +232,26 @@ footer{
   </div>
 </section>
 
-<section class="section" id="location">
-  <h2>Find Us Here</h2>
-  <iframe 
-  src="https://www.google.com/maps?q=Cafe+Flourista+Hampankatta+Mangalore&output=embed">
-  </iframe>
+<section class="section" id="reservation">
+  <h2>Reserve a Table</h2>
+  <form>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Email">
+    <input type="date">
+    <textarea placeholder="Special Requests"></textarea>
+    <button class="btn">Submit</button>
+  </form>
+</section>
+
+<section class="section">
+  <h2>Location</h2>
+  <iframe src="https://www.google.com/maps?q=Cafe+Flourista+Hampankatta+Mangalore&output=embed"></iframe>
 </section>
 
 <footer>
-  <p>📍 Navbharath Circle, Hampankatta, Mangalore</p>
-  <p>📞 91414 17777</p>
+  <p>Navbharath Circle, Hampankatta, Mangalore</p>
   <p>Open 10AM – 9PM | Closed Tuesdays</p>
 </footer>
-
-<a href="https://wa.me/919141417777" class="whatsapp">💬</a>
 
 </body>
 </html>
