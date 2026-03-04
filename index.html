@@ -1,101 +1,71 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shreyas Constructions</title>
+  <style>
+    body {margin:0;font-family:Arial,sans-serif;color:#333;line-height:1.6;}
+    header{background:#0D6EFD;color:#fff;padding:20px;text-align:center;}
+    header h1{margin:0;}
+    nav a{color:#fff;text-decoration:none;margin:0 15px;font-weight:bold;}
+    .hero{background:#eee url('https://source.unsplash.com/1600x600/?construction') center/cover no-repeat;text-align:center;padding:100px 20px;color:#fff;}
+    .hero h2{font-size:2.5em;margin-bottom:20px;}
+    .hero a{display:inline-block;padding:15px 30px;background:#ffc107;color:#333;text-decoration:none;font-weight:bold;border-radius:5px;}
+    section{padding:60px 20px;text-align:center;}
+    .cards{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
+    .card{background:#f4f4f4;padding:20px;border-radius:8px;flex:1 1 250px;}
+    form input,form textarea{width:100%;padding:12px;margin:10px 0;border:1px solid #ccc;border-radius:5px;}
+    form button{padding:12px 25px;background:#0D6EFD;color:#fff;border:none;border-radius:5px;font-weight:bold;cursor:pointer;}
+    footer{background:#333;color:#fff;padding:20px;text-align:center;}
+  </style>
+</head>
+<body>
 
-body {
-  line-height: 1.6;
-  color: #333;
-}
+<header>
+  <h1>Shreyas Constructions</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
+<section id="home" class="hero">
+  <h2>Building Your Dreams Into Reality</h2>
+  <p>Reliable construction services for residential and commercial projects.</p>
+  <a href="#contact">Get a Quote</a>
+</section>
 
-header {
-  background: #0D6EFD;
-  color: #fff;
-  padding: 20px 0;
-}
+<section id="about">
+  <h2>About Us</h2>
+  <p>Shreyas Constructions has been delivering quality construction projects for over 10 years. We focus on safety, innovation, and customer satisfaction.</p>
+</section>
 
-header h1 {
-  display: inline-block;
-  margin-left: 20px;
-}
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="cards">
+    <div class="card"><h3>Residential Construction</h3><p>Building homes that last a lifetime with quality materials and expert craftsmanship.</p></div>
+    <div class="card"><h3>Commercial Construction</h3><p>Delivering efficient and modern commercial spaces on time and budget.</p></div>
+    <div class="card"><h3>Renovation & Remodeling</h3><p>Transforming spaces with innovative designs and practical solutions.</p></div>
+  </div>
+</section>
 
-header nav {
-  float: right;
-  margin-right: 20px;
-}
+<section id="contact">
+  <h2>Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <p>Phone: +91 12345 67890 | Email: info@shreyasconstructions.com</p>
+</section>
 
-header nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: bold;
-}
+<footer>
+  <p>&copy; 2026 Shreyas Constructions. All Rights Reserved.</p>
+</footer>
 
-.hero {
-  background: url('https://source.unsplash.com/1600x600/?construction,building') no-repeat center center/cover;
-  color: #fff;
-  text-align: center;
-  padding: 150px 20px;
-}
-
-.hero .btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 15px 30px;
-  background: #ffc107;
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-}
-
-section {
-  padding: 80px 0;
-}
-
-.service-cards {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.card {
-  flex: 1 1 300px;
-  background: #f4f4f4;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form button {
-  padding: 15px 30px;
-  border: none;
-  background: #0D6EFD;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-}
+</body>
+</html>
